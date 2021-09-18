@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibile" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantor</title>
+
+    <link href="css/cantor.css" rel="stylesheet">
+    <link href="css/html.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <p>Przelicz walutę</p>
+    <div class="container">
+        <form class="js-form">
+            <fieldset>
+                <legend>Kantor</legend>
+                <p>
+                    <label>
+                        Podaj wartośc w PLN:
+                        <input class="js-pln" type="number" min="0.00" step="any" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Wybierz walutę:
+                        <select class="changeCurrency">
+                            <option value="usd" class="usd"><span class="currency">USD</span></option>
+                            <option value="aud" class="aud"><span class="currency">AUD</span></option>
+                        </select>
+                    </label>
+                <p>
+                    <label> Podaj wartość waluty w przeliczeniu na 1 PLN
+                        <input type="number" class="js-chosenCurrency" min="0.00" step="any" required />
+                    </label>
+                </p>
+                </p>
+            </fieldset>
+            <p>
+                <button class="js-submit"> Przelicz </button>
+                <button type="reset" class="js-reset">Wyczyść</button>
+            </p>
+        </form>
+        <p>
+            Przeliczenie walut wynosi: <strong class="js-calculate">N/A</strong>
+        </p>
+    </div>
+
+</body>
+
+</html>
