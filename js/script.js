@@ -1,12 +1,10 @@
 let plnElement = document.querySelector(".js-pln");
-let usdElement = document.querySelector(".usd");
-let audElement = document.querySelector(".aud");
+// let usdElement = document.querySelector(".usd");
+// let audElement = document.querySelector(".aud");
 let formElement = document.querySelector(".js-form");
 let calculatedElement = document.querySelector(".js-calculate");
 let chosenCurrency = document.querySelector(".js-chosenCurrency");
-let changeCurrency = document.querySelector(".changeCurrency");
-
-  let chosen = parseFloat(chosenCurrency.value);
+let chosen = parseFloat(chosenCurrency.value);
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -17,5 +15,4 @@ formElement.addEventListener("submit", (event) => {
     result = pln * chosen;
 
     calculatedElement.innerText = result.toFixed(2);
-    console.log(result)
 });
