@@ -16,13 +16,6 @@ formElement.addEventListener("submit", (event) => {
     let result;
     result = pln * chosen;
 
-
-    // if (usdElement) {
-    //     console.log(`Wybrano walutę: usd`)
-    // }
-    // else if (formElement.contains()) {
-    //     console.log(`Wbrano walutę: aud`)
-    // }
     calculatedElement.innerText = result.toFixed(2);
     console.log(`Przeliczono, wynik to: ${result}`)
 });
@@ -31,8 +24,10 @@ changeCurrency.addEventListener("input", () => {
 
     switch (changeCurrency.value) {
         case "usd":
+            chosenCurrency.value = 3.92;
             console.log("Wybrano usd")
         case "aud":
+            chosenCurrency.value = 2.85;
             console.log("Wybrano aud")
     }
 });
