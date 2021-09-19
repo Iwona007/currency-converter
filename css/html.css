@@ -8,4 +8,8 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    color: hsl(0, 0%, 15%);
+    /* background-color: azure; */
+    background-color: rgba(241, 240, 240, 0.863);
 }
