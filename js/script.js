@@ -6,15 +6,7 @@ let calculatedElement = document.querySelector(".js-calculate");
 let chosenCurrency = document.querySelector(".js-chosenCurrency");
 let changeCurrency = document.querySelector(".changeCurrency");
 
-changeCurrency.addEventListener("input", () => {
-
-    switch (changeCurrency.value) {
-        case "usd":
-            chosenCurrency.value = 3.92;
-        case "aud":
-            chosenCurrency.value = 2.85;
-    }
-});
+  let chosen = parseFloat(chosenCurrency.value);
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -25,4 +17,5 @@ formElement.addEventListener("submit", (event) => {
     result = pln * chosen;
 
     calculatedElement.innerText = result.toFixed(2);
+    console.log(result)
 });
