@@ -8,9 +8,9 @@
     <title>Kantor</title>
     <link rel="icon" href="images/moneta.JPG">
     <meta property="" content="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" 
-    integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/body.css" rel="stylesheet">
     <link href="css/cantor.css" rel="stylesheet">
@@ -26,26 +26,28 @@
         </header>
         <form class="js-form">
             <fieldset class="form__header2 form__fieldset">
-                <legend class="form__legend"><h2>Kantor</h2></legend>
+                <legend class="form__legend">
+                    <h2>Kantor</h2>
+                </legend>
                 <p>Pola oznaczone * są wymagane.</p>
                 <p>
                     <label>
-                       <span class="form__labelText"> Podaj wartośc w PLN*:</span>
-                        <input class="form__field js-pln" type="number" min="0.00" step="any" required>
+                        <span class="form__labelText"> Podaj wartośc w PLN*:</span>
+                        <input class="form__field js-plnAmount" type="number" min="0.00" step="any" required>
                     </label>
                 </p>
                 <p>
                     <label>
-                       <span class="form__labelText">Wybierz walutę:</span>
-                        <select class="form__field changeCurrency">
-                            <option value="usd" class="usd">USD</option>
-                            <option value="aud" class="aud">AUD</option>
+                        <span class="form__labelText">Wybierz walutę:</span>
+                        <select class="form__field js-chosenCurrency">
+                            <option value="USD" class="USD">USD</option>
+                            <option value="AUD" class="AUD">AUD</option>
                         </select>
                     </label>
                 <p>
-                    <label> 
+                    <label>
                         <span class="form__labelText">Podaj wartość waluty w przeliczeniu na 1 PLN*</span>
-                        <input type="number" class="form__field js-chosenCurrency" min="0.00" step="any" required />
+                        <input type="number" class="form__field js-rateCurrency" min="0.00" step="any" required />
                     </label>
                 </p>
                 </p>
@@ -60,4 +62,5 @@
         </p>
     </div>
 </body>
+
 </html>
