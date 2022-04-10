@@ -9,4 +9,5 @@ Welcome on "Currency converter" website. I have created it in order to learn Jav
 ## Technology:
 - JavaSript
 - HtML5
+- BEM
 - Css
