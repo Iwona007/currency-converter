@@ -41,25 +41,32 @@
                         <span class="form__labelText">Wybierz walutę:</span>
                         <select class="form__field js-chosenCurrency">
                             <option value="USD" class="USD">USD</option>
-                            <option value="AUD" class="AUD">AUD</option>
+                            <option value="CAD" class="CAD">CAD</option>
                         </select>
                     </label>
+
                 <p>
                     <label>
-                        <span class="form__labelText">Podaj wartość waluty w przeliczeniu na 1 PLN*</span>
-                        <input type="number" class="form__field js-rateCurrency" min="0.00" step="any" required />
+                        <span class="form__labelText js-formUsd">Kurs dla USD:</span>
+                        <input class="form__field js-usdRate" type="number" value="4.2935" step="any" min="0.0001" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Kurs dla CAD:</span>
+                        <input class="form__field js-cadRate" type="number" value="3.3888" step="any" min="0.0001" />
                     </label>
                 </p>
                 </p>
+                <section>
+                    <button class="button js-submit"> Przelicz </button>
+                    <button type="reset" class="button js-reset">Wyczyść</button>
+                </section>
+                <p class="paragraph">
+                    Przeliczenie walut wynosi: <strong class="js-calculate">N/A</strong>
+                </p>
             </fieldset>
-            <section>
-                <button class="button js-submit"> Przelicz </button>
-                <button type="reset" class="button js-reset">Wyczyść</button>
-            </section>
         </form>
-        <p class="paragraph">
-            Przeliczenie walut wynosi: <strong class="js-calculate">N/A</strong>
-        </p>
     </div>
 </body>
 

@@ -1,10 +1,13 @@
 {
-    const calculateResult = (plnAmount, chosenCurrency, rateCurrency) => {
+    const calculateResult = (plnAmount, chosenCurrency) => {
+        
         switch (chosenCurrency) {
-            case chosenCurrency:
-                return plnAmount / rateCurrency;
-            case chosenCurrency:
-                return plnAmount / rateCurrency;
+            case "CAD":
+                chosenCurrency = document.querySelector(".js-cadRate");
+                return plnAmount / +chosenCurrency.value;
+            case "USD":
+                chosenCurrency = document.querySelector(".js-usdRate");
+                return plnAmount / +chosenCurrency.value;
         }
     }
 
@@ -17,13 +20,11 @@
         event.preventDefault();
         const plnAmountElement = document.querySelector(".js-plnAmount");
         const chosenCurrencyElement = document.querySelector(".js-chosenCurrency");
-        const chosenRateCurrencyElement = document.querySelector(".js-rateCurrency")
 
         const plnAmount = +plnAmountElement.value;
-        const chosenCurrency = chosenCurrencyElement.value;
-        const rateCurrency = +chosenRateCurrencyElement.value;
+        let chosenCurrency = chosenCurrencyElement.value;
 
-        const result = calculateResult(plnAmount, chosenCurrency, rateCurrency);
+        const result = calculateResult(plnAmount, chosenCurrency);
 
         onResultText(plnAmount, result, chosenCurrency);
     }
